@@ -412,10 +412,12 @@
     function createBottomNavbar() {
         const bottomNav = document.createElement('nav');
         bottomNav.className = 'navbar fixed-bottom navbar-light bg-light';
+        const currentDate = new Date();
+        const dateString = currentDate.toLocaleDateString();
         bottomNav.innerHTML = `
             <div class="container-fluid">
                 <span class="navbar-text">
-                    © ${new Date().getFullYear()} WEBD 6201 Student. All rights reserved.
+                    © ${dateString} | WEBD 6201 Student. All rights reserved.
                 </span>
             </div>
         `;
